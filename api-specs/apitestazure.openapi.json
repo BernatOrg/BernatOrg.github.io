@@ -1,12 +1,22 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "TestAspnetCore.Web",
-    "version": "v1"
+    "title": "ApiTestServices",
+    "description": "Useful API to test Azure App services deployed using Github Actions",
+    "version": "1.0",
+    
   },
+  "servers": [
+     {
+       "url": "https://apitestservices.azurewebsites.net"
+     }
+    ],
   "paths": {
     "/api/v1/Test/echoping": {
       "get": {
+        "summary": "Echoping test",
+        "description": "Method to health check",
+        "operationId": "echoping",
         "tags": [
           "Test"
         ],
@@ -19,6 +29,9 @@
     },
     "/api/v1/Test/gettest": {
       "get": {
+         "summary": "GetTest",
+         "description": "Get method to test",
+         "operationId": "gettest",
         "tags": [
           "Test"
         ],
@@ -30,6 +43,8 @@
             "schema": {
               "type": "string"
             }
+             "description": "Name to search",
+             "example": "John"
           },
           {
             "name": "Age",
@@ -38,6 +53,8 @@
               "type": "integer",
               "format": "int32"
             }
+            "description": "User's age",
+            "example": "35"
           }
         ],
         "responses": {
