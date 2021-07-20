@@ -3,8 +3,7 @@
   "info": {
     "title": "ApiTestServices",
     "description": "Useful API to test Azure App services deployed using Github Actions",
-    "version": "1.0",
-    
+    "version": "1.0"
   },
   "servers": [
      {
