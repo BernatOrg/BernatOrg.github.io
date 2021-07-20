@@ -1,0 +1,64 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ApiTestServices",
+    "description": "Useful API to test Azure App services deployed using Github Actions",
+    "version": "1.0"
+  },
+  "servers": [
+     {
+       "url": "https://apitestservices.azurewebsites.net"
+     }
+    ],
+  "paths": {
+    "/api/v1/Test/echoping": {
+      "get": {
+        "summary": "Echoping test",
+        "description": "Method to health check",
+        "operationId": "echoping",
+        "tags": [
+          "Test"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/Test/gettest": {
+      "get": {
+         "summary": "GetTest",
+         "description": "Get method to test",
+         "operationId": "gettest",
+        "tags": [
+          "Test"
+        ],
+        "parameters": [
+          {
+            "name": "Name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Age",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}
