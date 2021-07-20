@@ -43,8 +43,6 @@
             "schema": {
               "type": "string"
             }
-             "description": "Name to search",
-             "example": "John"
           },
           {
             "name": "Age",
@@ -53,8 +51,6 @@
               "type": "integer",
               "format": "int32"
             }
-            "description": "User's age",
-            "example": "35"
           }
         ],
         "responses": {
