@@ -40,7 +40,7 @@
             "in": "query",
             "description": "PRM shop code",
             "required": true,
-            "type": "string"
+            "type": "string" 
           },
           {
             "name": "shopIdPRM",
